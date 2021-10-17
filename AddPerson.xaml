@@ -1,0 +1,38 @@
+﻿<Window x:Class="Geospatial_based_Recommender_System_via_XAML_UI_and_WPF.AddPerson"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Geospatial_based_Recommender_System_via_XAML_UI_and_WPF"
+        mc:Ignorable="d"
+        Title="AddPerson" Height="400" Width="400" WindowStartupLocation="CenterScreen" Topmost="True" Loaded="AddPerson_Load" ResizeMode="NoResize" WindowStyle="SingleBorderWindow">
+    <Grid>
+        <Canvas Background="#FF726E6E">
+            <Image x:Name="Photo_Box" Height="119" Canvas.Left="4" Canvas.Top="4" Width="126" />
+            <Button x:Name="Photo_Upload_Button" Content="Upload Your Photo" Canvas.Left="12" Canvas.Top="144" Width="110" FontFamily="Calibri" FontWeight="Bold" Click="Photo_Upload_Button_Click"/>
+            <Label x:Name="First_Name"  Content="First Name:" Canvas.Left="141" Canvas.Top="22" Width="71" FontFamily="Calibri" FontWeight="Bold"/>
+            <Label x:Name="Surname" Content="Surname:" Canvas.Left="141" Canvas.Top="64" Width="71" FontFamily="Calibri" FontWeight="Bold"/>
+            <Label x:Name="Collab_Role" Content="Role:" Canvas.Left="141" Canvas.Top="102" Width="71" FontFamily="Calibri" FontWeight="Bold"/>
+            <Label x:Name="Collab_Other_Role" Content="Other Role:" Canvas.Left="141" Canvas.Top="138" Width="71" FontFamily="Calibri" FontWeight="Bold" RenderTransformOrigin="0.146,0.255" Visibility="Hidden"/>
+            <TextBox x:Name="firstNameTextBox" Canvas.Left="244" Canvas.Top="26" Text="" TextWrapping="Wrap" Width="120" FontFamily="Calibri" FontWeight="Bold"/>
+            <TextBox x:Name="surnameTextBox" Canvas.Left="244" Canvas.Top="68" Text="" TextWrapping="Wrap" Width="120" FontFamily="Calibri" FontWeight="Bold"/>
+            <TextBox x:Name="otherRoleTextBox" Canvas.Left="244" Canvas.Top="142" Text="" TextWrapping="Wrap" Width="120" FontFamily="Calibri" FontWeight="Bold" Visibility="Hidden"/>
+            <TextBox x:Name="latTextBox" Canvas.Left="209" Canvas.Top="205" Text="" TextWrapping="Wrap" Width="172" FontFamily="Calibri" FontWeight="Bold" IsReadOnly="True"/>
+            <TextBox x:Name="lngTextBox" Canvas.Left="209" Canvas.Top="235" Text="" TextWrapping="Wrap" Width="172" FontFamily="Calibri" FontWeight="Bold" IsReadOnly="True"/>
+            <Button x:Name="Add_Collab_Button" Content="Add Your information" Canvas.Left="253" Canvas.Top="270" Width="128" Height="22" FontFamily="Calibri" FontWeight="Bold" Click="Add_Collab_Button_Click"/>
+            <TextBox x:Name="startTimeTextBox" Canvas.Left="176" Canvas.Top="309" Text="" TextWrapping="Wrap" Width="154" FontFamily="Calibri" FontWeight="Bold" Height="18"/>
+            <TextBox x:Name="endTimeTextBox" Canvas.Left="176" Canvas.Top="332" Text="" TextWrapping="Wrap" Width="154" FontFamily="Calibri" FontWeight="Bold" Height="18"/>
+            <ComboBox x:Name="AMPM_1" Canvas.Left="339" Canvas.Top="306" Width="44" Height="18" FontFamily="Calibri" FontWeight="Bold"/>
+            <ComboBox x:Name="AMPM_2" Canvas.Left="339" Canvas.Top="332" Width="44" Height="18" FontFamily="Calibri" FontWeight="Bold"/>
+            <Label x:Name="Lat" Content="Lat:" Canvas.Left="176" Canvas.Top="201" FontFamily="Calibri" FontWeight="Bold"/>
+            <Label x:Name="Location" Content="Location (Lat/Lng)" Canvas.Top="213" Width="118" Height="27" Canvas.Left="51" FontFamily="Calibri" FontWeight="Bold"/>
+            <Label x:Name="Lng" Content="Lng:" Canvas.Left="174" Canvas.Top="231" FontFamily="Calibri" FontWeight="Bold"/>
+            <Label x:Name="Support_Time_Start" Content="Support Time Availability Start:" Canvas.Left="6" Canvas.Top="304" Width="184" Height="27" RenderTransformOrigin="0.5,0.5" FontFamily="Calibri" FontWeight="Bold"/>
+            <Label x:Name="Support_Time_End" Content="Support Time Availability End:" Canvas.Left="6" Canvas.Top="327" Width="184" Height="27" RenderTransformOrigin="0.5,0.5" FontFamily="Calibri" FontWeight="Bold"/>
+            <ComboBox x:Name="mainRoleComboBox" Canvas.Left="244" Canvas.Top="102" Width="120" Height="21" FontFamily="Calibri" FontWeight="Bold" SelectionChanged="MainRoleComboBox_SelectionChanged"/>
+            <Label x:Name="Support_Level" Content="Level of Support:" Canvas.Left="141" Canvas.Top="169" Width="98" FontFamily="Calibri" FontWeight="Bold" RenderTransformOrigin="0.146,0.255"/>
+            <ComboBox x:Name="supportLevelComboBox" Canvas.Left="244" Canvas.Top="169" Width="120" Height="21" FontFamily="Calibri" FontWeight="Bold" SelectionChanged="SupportLevelComboBox_SelectionChanged"/>
+        </Canvas>
+
+    </Grid>
+</Window>

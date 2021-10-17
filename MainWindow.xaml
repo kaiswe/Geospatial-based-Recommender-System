@@ -1,0 +1,30 @@
+﻿<Window x:Class="Geospatial_based_Recommender_System_via_XAML_UI_and_WPF.MainWindow"
+        x:Name="MainWindowInstance"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gmaps="clr-namespace:GMap.NET.WindowsPresentation;assembly=GMap.NET.WindowsPresentation"
+        mc:Ignorable="d"
+        Title="MainWindow"  Height="1000" Width="1500" WindowStartupLocation="CenterScreen" Closed="ShutdownApp" Background="#FF4F4C4C" ResizeMode="NoResize"  PreviewMouseRightButtonDown="Gmap_GetPoint" MouseEnter="PlaceCollabMarkers">
+    <Grid x:Name="myGrid">
+        <gmaps:GMapControl x:Name="gmaps"  PreviewMouseRightButtonDown="AddOrRetrieve" MouseMove="OnMouseMove" PreviewMouseLeftButtonDown="Gmap_OnMarkerClick" />
+        <GroupBox Header="coordinates" Height="136" HorizontalAlignment="Right" Margin="0,35,5,0" Name="groupBox1" VerticalAlignment="Top" Width="167">
+            <Grid>
+                <TextBox Height="23" Margin="16,32,25,0" Name="textBoxLat"  VerticalAlignment="Top" />
+                <TextBox Margin="16,61,25,0" Name="textBoxLng" Height="22" VerticalAlignment="Top" />
+                <Label Height="23" HorizontalAlignment="Right" Margin="0,32,-2,0" Name="label2" VerticalAlignment="Top" Width="27" VerticalContentAlignment="Center">lat</Label>
+                <Label Height="28" HorizontalAlignment="Right" Margin="0,58,-4,0" Name="label3" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="29">lng</Label>
+            </Grid>
+        </GroupBox>
+        <Button x:Name="OpenTwitterClient" Margin="1215,42,191,849" Click="OpenTwitterClient_Click">
+            <Image Source="/Icons/tweet.png" Stretch="Fill"></Image>
+        </Button>
+        <Button x:Name="OpenProfile" Margin="1095,42,311,849" Click="OpenProfile_Click">
+            <Image Source="/Icons/profile_icon.jpg" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="UpdateProfile" Margin="983,42,423,849" Click="UpdateProfile_Click">
+            <Image Source="/Icons/UpdateProfile_Icon.png" Stretch="Fill"/>
+        </Button>
+    </Grid>
+</Window>

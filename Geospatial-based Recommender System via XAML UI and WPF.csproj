@@ -1,0 +1,118 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Geospatial_based_Recommender_System_via_XAML_UI_and_WPF</RootNamespace>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon />
+    <StartupObject />
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="AllCollaborators-info.xml" />
+    <None Remove="Collaborator_Photos\1.jpg" />
+    <None Remove="Collaborator_Photos\2.jpg" />
+    <None Remove="Collaborator_Photos\3.jpg" />
+    <None Remove="Collaborator_Photos\4.jpg" />
+    <None Remove="Icons\profile_icon.jpg" />
+    <None Remove="Icons\tweet.png" />
+    <None Remove="Icons\UpdateProfile_Icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="AllCollaborators-info.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GeoCoordinate.NetCore" Version="1.0.0.1" />
+    <PackageReference Include="GMap.NET.Core" Version="2.0.2" />
+    <PackageReference Include="Microsoft.Toolkit.Wpf.UI.Controls" Version="6.1.2" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.992.28" />
+    <PackageReference Include="MySql.Data" Version="8.0.26" />
+    <PackageReference Include="SQLite" Version="3.13.0" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.115" />
+    <PackageReference Include="TweetinviAPI" Version="5.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="GeoCoordinate.NetCore">
+      <HintPath>bin\Debug\netcoreapp3.1\GeoCoordinate.NetCore.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="GMap.NET.Core">
+      <HintPath>bin\Debug\netcoreapp3.1\GMap.NET.Core.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms">
+      <HintPath>bin\Debug\netcoreapp3.1\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsPresentation">
+      <HintPath>bin\Debug\netcoreapp3.1\GMap.NET.WindowsPresentation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Core">
+      <HintPath>..\..\..\.nuget\packages\microsoft.web.webview2\1.0.992.28\lib\netcoreapp3.0\Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Wpf">
+      <HintPath>..\..\..\.nuget\packages\microsoft.web.webview2\1.0.992.28\lib\netcoreapp3.0\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Tweetinvi">
+      <HintPath>..\..\..\.nuget\packages\tweetinviapi\5.0.4\lib\netstandard2.0\Tweetinvi.dll</HintPath>
+    </Reference>
+    <Reference Include="Tweetinvi.Controllers">
+      <HintPath>..\..\..\.nuget\packages\tweetinviapi\5.0.4\lib\netstandard2.0\Tweetinvi.Controllers.dll</HintPath>
+    </Reference>
+    <Reference Include="Tweetinvi.Core">
+      <HintPath>..\..\..\.nuget\packages\tweetinviapi\5.0.4\lib\netstandard2.0\Tweetinvi.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Tweetinvi.Credentials">
+      <HintPath>..\..\..\.nuget\packages\tweetinviapi\5.0.4\lib\netstandard2.0\Tweetinvi.Credentials.dll</HintPath>
+    </Reference>
+    <Reference Include="Tweetinvi.Logic">
+      <HintPath>..\..\..\.nuget\packages\tweetinviapi\5.0.4\lib\netstandard2.0\Tweetinvi.Logic.dll</HintPath>
+    </Reference>
+    <Reference Include="Tweetinvi.Security">
+      <HintPath>..\..\..\.nuget\packages\tweetinviapi\5.0.4\lib\netstandard2.0\Tweetinvi.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Tweetinvi.Streams">
+      <HintPath>..\..\..\.nuget\packages\tweetinviapi\5.0.4\lib\netstandard2.0\Tweetinvi.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="Tweetinvi.WebLogic">
+      <HintPath>..\..\..\.nuget\packages\tweetinviapi\5.0.4\lib\netstandard2.0\Tweetinvi.WebLogic.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Collaborator_Photos\1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Collaborator_Photos\2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Collaborator_Photos\3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Collaborator_Photos\4.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\profile_icon.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\tweet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\UpdateProfile_Icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>
